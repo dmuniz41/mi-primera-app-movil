@@ -1,11 +1,14 @@
 import { Link } from "expo-router";
-import { ScrollView, Text } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
+import { HomeIcon } from "./icons";
 
 export default function About() {
   return (
-    <ScrollView>
-      <Link href="/" className="text-blue-500 text-xl font-bold mt-4">
-        Home
+    <ScrollView className="bg-black px-2 pt-8">
+      <Link asChild href="/">
+        <Pressable>
+          <HomeIcon />
+        </Pressable>
       </Link>
       <Text className="text-2xl text-white mb-8 font-bold">About</Text>
       <Text className="text-xl text-white/90 mb-4">
