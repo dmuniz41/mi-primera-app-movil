@@ -5,12 +5,11 @@ import { CircleInfoIcon } from "./icons";
 
 export default function RootLayout({ children }) {
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-black">
       <Stack
         screenOptions={{
           headerStyle: {
             backgroundColor: "black",
-            paddingInline: 10,
           },
           headerTintColor: "yellow",
           headerTitle: "",

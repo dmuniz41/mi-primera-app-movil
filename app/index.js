@@ -1,18 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  View,
-  FlatList,
-  ActivityIndicator,
-  Pressable,
-} from "react-native";
-import Constants from "expo-constants";
+import { FlatList, ActivityIndicator } from "react-native";
 import React, { useEffect } from "react";
 import { getData } from "../lib/mockData";
 import { AnimatedCard } from "../components/Card";
-import { Logo } from "../logo";
-import { Link } from "expo-router";
-import { CircleInfoIcon } from "./icons";
+import { Screen } from "../components/Screen";
 
 export default function Index() {
   const [data, setData] = React.useState([]);
@@ -22,9 +13,8 @@ export default function Index() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <Screen>
       <StatusBar style="auto" />
-
       {data.length === 0 ? (
         <ActivityIndicator size="large" color="#000" />
       ) : (
@@ -36,14 +26,6 @@ export default function Index() {
           )}
         />
       )}
-    </View>
+    </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "black",
-    paddingTop: Constants.statusBarHeight,
-    paddingInline: 10,
-  },
-});
