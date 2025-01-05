@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { FlatList, ActivityIndicator } from "react-native";
 import React, { useEffect } from "react";
-import { getData } from "../lib/mockData";
-import { AnimatedCard } from "../components/Card";
-import { Screen } from "../components/Screen";
+import { getData } from "../../lib/mockData";
+import { AnimatedCard } from "../../components/Card";
+import { Screen } from "../../components/Screen";
 
 export default function Index() {
   const [data, setData] = React.useState([]);

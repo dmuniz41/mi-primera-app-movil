@@ -30,12 +30,10 @@ export default function Details({ params }) {
           <ActivityIndicator size="large" color="white" />
         ) : (
           <ScrollView>
-            <Text className="text-2xl text-white font-bold">
+            <Text className="text-2xl text-yellow-500 font-bold">
               Title: {post.title}
             </Text>
-            <Text className="text-2xl text-white font-bold">
-              Description: {post.body}
-            </Text>
+            <Text className="text-xl text-white">Description: {post.body}</Text>
             <Link asChild href="/">
               <Text className="text-2xl text-blue-500 font-bold">
                 Back to Home

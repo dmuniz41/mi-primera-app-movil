@@ -1,7 +1,7 @@
 import { Link } from "expo-router";
 import { Pressable, ScrollView, Text, View } from "react-native";
-import { HomeIcon } from "./icons";
-import { Screen } from "../components/Screen";
+import { Screen } from "../../components/Screen";
+import { HomeIcon } from "../icons";
 
 export default function About() {
   return (
